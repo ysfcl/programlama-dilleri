@@ -1,0 +1,75 @@
+program         → { statement }*
+
+
+
+StatementList → Statement StatementList
+              | ε
+
+
+Statement → Declaration
+          | Assignment
+          | IfStatement
+          | LoopStatement
+          | ReturnStatement
+          | Expression ;
+          | FunctionCall
+          | FunctionDefinition
+
+
+
+Declaration → VERI_TIPI DEGISKEN "=" expression ";"
+
+
+
+Assignment → DEGISKEN "=" expression ";"
+
+
+
+Condition → DEGISKEN OPERATOR DEGER
+
+
+IfStatement → if ( Condition ) { StatementList } ElsePart
+
+
+ElsePart → else if ( Condition ) { StatementList } ElsePart
+         | else { StatementList }
+         | ε
+
+
+ReturnStatement → return Expression ;
+
+
+
+FunctionDefinition → VERI_TIPI DEGISKEN ( ParameterList ) { StatementList }
+
+
+
+ParameterList → VERI_TIPI DEGISKEN , ParameterList
+              | VERI_TIPI DEGISKEN
+              | ε
+
+LoopStatement → while ( Condition ) { StatementList }
+
+
+
+FunctionCall → (ANAHTAR_KELIME | DEGISKEN) ( ArgumentList ) ;
+
+
+
+ArgumentList → Argument , ArgumentList
+              | Argument
+              | ε
+
+
+Argument → STRING | SAYI | DEGISKEN | &DEGISKEN
+
+
+
+Expression → Operand OPERATOR Operand
+           | Operand
+
+Operand → SAYI | DEGISKEN
+
+
+
+

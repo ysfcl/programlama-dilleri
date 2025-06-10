@@ -20,4 +20,5 @@ Projenin kaynak kodunu indirdikten sonra Java yazılım dilinin çalıştırıla
 https://medium.com/@cilyusuf18/c-programlama-dili-alt-k%C3%BCmesi-i%C3%A7in-ger%C3%A7ek-zamanl%C4%B1-s%C3%B6zdizimi-vurgulay%C4%B1c%C4%B1s%C4%B1-java-gui-uygulamas%C4%B1-077248c7849b
 
 ## Proje Hakkındaki Youtube Videosuna Ulaşma
-https://youtu.be/7_B6UNFnExM
+https://youtu.be/5yAtNq6uA_U
+https://youtu.be/2WttTADbOG0
